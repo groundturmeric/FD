@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Food Access Massachusetts</title>
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+        <!-- <script src="https://d3js.org/d3.v4.js"></script> -->
+        <script src=" https://micku7zu.github.io/vanilla-tilt.js/"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+        <link rel="icon" type="image/x-icon" href="/images/avocado.ico">
+                <!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel='stylesheet' type='text/css'>
+   
+      
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <div id="intro">
+        <div id= "title">
+            <h1> Mapping Food Accessibility</h1>
+    </div>
+
+<!-- 
+      <img src="PICTURES/veggies1.jpg" alt="alt text" style="float:right; width:50vh; transform:translateX(30%) "  > 
+
+      <img src="PICTURES/foodzcolor.jpg" alt="alt text" style=" width:100vh; transform:translateX(30%) " > 
+    -->
+        <p>
+
+            Access to nutritious and affordable food is essential to the wellbeing of every community. Unfortunately, even in the United States there is a lack of access to healthy and affordable food impacting a significant portion of communities. 
+<br>
+<br>
+ </p>
+ <p>
+    The USDA defines “food access” as: Limited access to supermarkets, supercenters, grocery stores, or other sources of healthy and where low-cost fast food may make it less convenient for some Americans to eat a healthy diet (USDA-ERS, 2015 March 11).
+    <br> 
+    <br> 
+</p>
+<div class="tech-slideshow">
+    <div class="mover-1"></div>
+    <div class="mover-2"></div>
+  </div>
+    </div>
+
+
+
+    <!-- <><><><><><><><><><><> --><!-- <><><><><><><><><><><> -->
+<!-- <><><><><><><><><><><> --><!-- <><><><><><><><><><><> -->
+<!-- NETWORK MAP -->
+<!-- <><><><><><><><><><><> --><!-- <><><><><><><><><><><> -->
+<!-- <><><><><><><><><><><> --><!-- <><><><><><><><><><><> -->
+<!-- <><><><><><><><><><><> --><!-- <><><><><><><><><><><> -->
+<!-- <><><><><><><><><><><> --><!-- <><><><><><><><><><><> -->
+
+
+<div id="options2" >
+    <h1>Supermarket Service Networks</h1>
+    This first map is an overview of the food retail environment by visualizing accessibility: walkability according to 1 mile service networks for each supermarket as well as limited access to bus lines.
+    </p>
+    <img src="images/legend1crop.png" alt="alt text" style="float:left; height:30vh "  > 
+    <!-- <div id="filters2">
+        <input type="checkbox" class="type--option2"  value="supermarket" checked id = "supermarket"> Supermarkets <br>
+        <input type="checkbox" class="type--option2"  value="buse routes" checked id = "bus routes"> Bus routes <br>
+        <input type="checkbox" class="type--option2"  value="service networks" checked id = "service networks"> Service Networks <br>
+        <input type="checkbox" class="type--option2"  value="popdensity" checked id = "popdensity"> Population density <br>
+    </div> -->
+</div>
+
+<div id="chartmassnetwork" ></div>
+<script src="./supermarketsServiceNetwork.js"></script>
+
+<div id ="p2" class="paragraph"> 
+    <p>
+    Some of the challenges to food access are distance, mode of transportation and wealth level of the neighborhood since supermarkets with a lucrative drive, tend to open in high income neighborhoods. 
+</p>   
+</div>
+
+
+<div id ="p3" class="paragraph"> 
+    <p>
+        Mapping different types of food store in contrast census tracts wealth, is one approach to identify food areas that lack healthy food sources. Retailers that offer fresh food increase the food access, however, price and affordability may still be a barrier.
+        <br>
+        <br>
+        Food access impacts most of the populations in Massachusetts.  It is a challenge especially for low-income communities, people of color, seniors, and people with disabilities (Jamie Fanous, 2016).
+        </p>   
+</div>
+    
+<!-- <><><><><><><><><><><> --><!-- <><><><><><><><><><><> -->
+<!-- <><><><><><><><><><><> --><!-- <><><><><><><><><><><> -->
+<!-- Mass Food Stores -->
+<!-- <><><><><><><><><><><> --><!-- <><><><><><><><><><><> -->
+<!-- <><><><><><><><><><><> --><!-- <><><><><><><><><><><> -->
+<!-- <><><><><><><><><><><> --><!-- <><><><><><><><><><><> -->
+<!-- <><><><><><><><><><><> --><!-- <><><><><><><><><><><> -->
+
+        <div id="options">
+            <h1>Food Access in Massachusetts</h1>
+            <p>Use the filters below to hide or show different types of food resources,
+                <br>- click on tract areas or hover over circles for details,
+                <br>- zoom with scroll and click and drag to move the map
+                <br>
+            </p>
+            <div id="filters">
+              <input type="checkbox" class="type--option"  value="supermarket" checked id = "supermarket"> Supermarkets  <img src="images/croppedcircle2supermarket.png" alt="alt text" style="float:left; height:2vh; transform:translateY(1.6vh) "  > <br>
+              <input type="checkbox" class="type--option" value="restaurant" checked> Restaurants  <img src="images/croppedcircle2restaurant.png" alt="alt text" style="float:left; height:2vh; transform:translateY(1.6vh) "  ><br>
+              <input type="checkbox" class="type--option" value="convenience store" checked> Convenience stores  <img src="images/croppedcircle2conveniance.png" alt="alt text" style="float:left; height:2vh; transform:translateY(1.6vh)"  ><br>
+              <input type="checkbox" class="type--option" value="fast food" checked> Fast food <img src="images/croppedcircle2fastfood.png" alt="alt text" style="float:left; height:2vh ; transform:translateY(1.6vh)"  > <br>
+              <input type="checkbox" class="type--option" value="farmers market" checked> Farmer's markets <img src="images/croppedcircle2farmersmarket.png" alt="alt text" style="float:left; height:2vh; transform:translateY(1.6vh)"  > <br>
+                <img src="images/incomeLegend.png" alt="alt text" style="float:left; height:13vh; transform:translateY(4.6vh)"  >
+              </div>
+        </div>
+        <div id="chartmass"></div>
+        <script src="./massTracts.js"></script>
+
+
+    <div id ="p4" class="paragraph"> 
+        <p>
+            While fast food spots don’t offer high nutritional food, convenience stores offer limited goods for prices on average higher than a supermarket (Ver Ploeg, 2010, p. iv). Studies reveal that limited access to good food causes many negative health challenges, such as obesity and high blood pressure (Ver Ploeg, 2010; Feeding America, 2016).
+        </p>   
+    </div>
+
+
+
+
+
+          <!-- ><><><><><><><><>< -->
+        <!-- US MAP -->
+        <!-- ><><><><><><><><>< -->
+
+
+<!--  <h2>Low Income Areas with Low Access to Healthy Nutrition in the United States</h2> -->
+        <div id="options3">
+            <h1>Food Deserts in the U.S.</h1>
+            <p> The USDA studies of food access are done according to census tracts, which are based on population (between 1,200 and 8,000 people per tract). An urban census tract can portray a neighborhood, and a rural census tract, an entire town (U.S. Census Bureau, 2012). 
+                <br>- hover over food desert tract areas for details,
+                <br>- click and drag to move the map, zoom with scroll
+                <br>
+            </p>
+            <img src="images/legend3.png" alt="alt text" style="float:left; height:30vh; transform:translateY(4.6vh)"  > 
+        </div>
+    <!-- <div id = "chartcontainer"> -->
+            <div id="chart"></div>
+        <script src="./USlila.js"></script>
+
+        <!-- <h1>Food Insecurity, 2008 - 2020</h1>
+
+        <div id="linechart"></div>
+        <script src="./linechart.js"></script> -->
+      
+        <div id ="p5" class="paragraph"> 
+            <p>
+                <br>
+                <br>
+                This limited mapping of food access according to geographic locations of supermarkets and income by tract can only reveal the tip of the problem. 
+                <br>
+                <br>
+                Other limitations in this kind of study are the availability and reliability of data, localization of food access models for specific communities, regions, and even other states (Jamie Fanous, 2016).
+</p>   
+        </div>
+<!-- ><><><><><> SLIDER <><><><><> -->
+<!-- ><><><><><> MAP COMPARISON <><><><><> -->
+
+<!-- <div data-tilt>
+    <div id="image-comparison-slider">
+        <img src="https://raw.githubusercontent.com/groundturmeric/BostonWaterAtlas/0482a7e7c2ab8f9acd4af8f15cdfb46aeec78128/WaterAtlasATLASfinal/ecosystemsPICS3/ecosystemsHabitatSD.svg" alt="before">
+        <div class="img-wrapper">
+          <img src="https://raw.githubusercontent.com/groundturmeric/BostonWaterAtlas/0482a7e7c2ab8f9acd4af8f15cdfb46aeec78128/WaterAtlasATLASfinal/ecosystemsPICS3/ecosystemsHabitatSB.svg" alt="after">
+        </div>
+        <span class="label label-before">Before</span>
+        <span class="label label-after">map two</span>
+        <div class="handle">
+          <div class="handle-line"></div>
+          <div class="handle-circle">
+            <i class="fas fa-chevron-left"></i>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+          <div class="handle-line"></div>
+        </div>
+        <script src="./imagecompare.js"></script>
+      </div>
+    </div>
+      <script src="vanilla-tilt.js"></script>
+     -->
+
+
+     <div id ="p6Conclusion" class="paragraph"> 
+        <p> “Much more goes into food access than can ever be captured by a GIS map,” says Tim Stallmann, a Ph.D. student in geography at the University of North Carolina and a member of the Counter Cartographies Collective. “There’s a whole dimension around money and differential access to stores, how different stores make different groups of people feel welcomed. There’s the amount of time folks have to go shopping in the first place, and when they have it” (Anna Lena Phillips, 2011).
+            <br>
+            <br>
+            It will take real engagement with the people to better understand experiences of food access.
+            <br>
+            <br>
+         </p>   
+    </div>
+
+
+
+
+    <div id="googlemap" >
+        <iframe src="https://www.google.com/maps/embed?pb=!4v1638842128019!6m8!1m7!1s8DbvHAIyIiCnS5Jd4A2zZw!2m2!1d42.05841451872291!2d-70.993643004521!3f174.17784153224846!4f-11.574434605231957!5f0.7820865974627469" width="40%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!4v1638856253327!6m8!1m7!1sOwlR0QgdvON5jIcfv7mloA!2m2!1d42.34830275197272!2d-71.08403105348258!3f310.27!4f0.8100000000000023!5f0.5970117501821992" width="40%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+       </div>
+
+
+
+       <div class="footer">
+        <p> Design and Content by <b>Eric Fayad </b> <br>
+        </p>
+        <div id="references">
+            <b>References </b>
+            <li> Demographic Data: <a href="https://www.ers.usda.gov/data-products/food-access-research-atlas/download-the-data/"> USDA </a> </li>
+            <li> GIS Data: <a href="https://wiki.openstreetmap.org/wiki/Main_Page"> Open Street Map </a>, <a
+                    href="https://www.mass.gov/massdot-developers-data-sources"> massDOT</a>, <a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html"> US Census Bureau </a></li>
+         <li> Research: <a href="https://www.mapc.org/wp-content/uploads/2017/11/Food-Access-Index_MAPC-TUFTS_FINAL.pdf"> MASS Fodd Access Index</a>,
+            <a href="https://www.americanscientist.org/article/making-better-maps-of-food-deserts">American Scientist </a></div>
+    </div>
+
+
+    </body>
+</html>
+
+
+
+
+
+<!-- <<,,,......,.,.,.,.,.,.,.,.,<<<>>><>>><>>,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.>> -->
+
+<!-- <<,,,......,.,.,.,.,.,.,.,.,<<<>>><>>><>>,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.>> -->
+<!-- <<,,,......,.,.,.,.,.,.,.,.,<<<>>><>>><>>,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.>> -->
+<!-- <<,,,......,.,.,.,.,.,.,.,.,<<<>>><>>><>>,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.>> -->
+<!-- <<,,,......,.,.,.,.,.,.,.,.,<<<>>><>>><>>,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.>> -->
+<!-- <<,,,......,.,.,.,.,.,.,.,.,<<<>>><>>><>>,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.>> -->
+<!-- <<,,,......,.,.,.,.,.,.,.,.,<<<>>><>>><>>,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.>> -->
+<!-- <<,,,......,.,.,.,.,.,.,.,.,<<<>>><>>><>>,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.,.>> -->
+
+
