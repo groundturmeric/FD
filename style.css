@@ -25,7 +25,9 @@ html, body {
 
 #intro{	height: 100vh;
 }
-
+#supermarketnetwork{
+  background-color: black;
+}
 
 /* 
 .tech-slideshow {
@@ -499,25 +501,6 @@ stroke-dasharray: 34%;
 
 } */
 
-/* 
-ANIMATION2 */
-
-/* 
-.busroutes{
-  stroke-dasharray: 20;
-  stroke-dashoffset: var(--offset);
-  stroke-linecap: round;
-  animation: draw-line 15s linear infinite;
-  will-change: stroke-dashoffset;
-}
-
-
-
-@keyframes draw-line { 
-  100% {
-    stroke-dashoffset: -200;
-  }
-} */
 
 
 /* TEXT */

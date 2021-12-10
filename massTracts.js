@@ -2,8 +2,6 @@
 
  promises = [
     d3.csv("./data/foodsources.csv"),
-    d3.json("./geojson/gz_2010_us_040_00_20m.json"),
-
     d3.json("./geojson/MASSlilafinal.geojson"),
 ];
 
@@ -15,8 +13,7 @@ Promise.all(promises).then(function(data) {
 
     // console.log(foodsources);
 
-    const world = data[1];
-    const tracts = data [2];
+    const tracts = data [1];
 
 
 
@@ -46,13 +43,6 @@ Promise.all(promises).then(function(data) {
 
 
 
-
-    // svg.selectAll("path")
-    //     .data(world.features)
-    //     .enter()
-    //     .append("path")
-    //     .attr("d", path)
-    //     .attr("class", "state");
 
 
 //DRAW MAP
@@ -111,7 +101,15 @@ svg.selectAll("path.tracts")
 
 
     
-
+    // const busroutes = d3.select("svg")
+            // svg.selectAll("path.busroutes")
+            // .data(busRoutes.features)
+            // .enter()
+            // .append("path")
+            // .attr("d", busRoutesPath)
+            // .attr("class", "busroutes")
+            // .style("stroke", "red")
+            // .style("stroke-width" , 0.25);
    
         
 // select SVG path elements with class "land"
