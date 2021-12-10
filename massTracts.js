@@ -28,7 +28,7 @@ Promise.all(promises).then(function(data) {
 
 
         const projection = d3.geoMercator()
-        .translate([width/2, height/1.5])
+        .translate([width/1.4, height/1.5])
         .center([-70.821001, 41.9])
         .scale(12850);
 

@@ -31,14 +31,25 @@ Promise.all(promises2).then(function(data) {
         // const projection =d3.geoLagrange()
         //  const projection = d3.geoAlbers()
         const projection = d3.geoAlbersUsa()
-        .translate([width/3, height/2])
-        .scale(1000);
+        .translate([width/2, height/2])
+        .scale(900);
         // .rotate([0,-90])
         // .center([0.821001, 41.9])
        
 
     const path = d3.geoPath()
         .projection(projection);
+
+
+//DRAW MAP
+const UStractColorScale = d3.scaleOrdinal(d3.schemeCategory10)
+.domain([0,1])
+// .range(["rgb(27, 27, 27)", "rgb(111, 111, 111)"])
+.range(["#FF00FF", "#FF0000"])
+// .range(["#212529", "#495057"])
+
+
+
 
     svg.selectAll("path")
         .data(world.features)
